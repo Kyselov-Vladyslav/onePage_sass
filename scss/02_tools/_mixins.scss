@@ -1,7 +1,7 @@
 @use '../01-settings/' as *;
 
 @mixin medium {
-    @media screen and (min-width: $bp-mp) {
+    @media screen and (min-width: $bp-md) {
         
         @content;
 
