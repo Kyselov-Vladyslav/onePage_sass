@@ -1,140 +1,22 @@
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
-}
+/* Error: Module loop: this module is already being loaded.
+ *   ,--> scss\07-templates\_index.scss
+ * 1 | @forward '';
+ *   | ^^^^^^^^^^^ new load
+ *   '
+ *   ,--> scss\main.scss
+ * 7 | @use "07-templates" as *;
+ *   | ======================== original load
+ *   '
+ *   scss\07-templates\_index.scss 1:1  @use
+ *   scss\main.scss 7:1                 root stylesheet */
 
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
   display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: Module loop: this module is already being loaded.\a   \250c \2500 \2500 > scss\\07-templates\\_index.scss\a 1 \2502  @forward '';\a   \2502  ^^^^^^^^^^^ new load\a   \2575 \a   \250c \2500 \2500 > scss\\main.scss\a 7 \2502  @use \"07-templates\" as *;\d\a   \2502  \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501  original load\a   \2575 \a   scss\\07-templates\\_index.scss 1:1  @use\a   scss\\main.scss 7:1                 root stylesheet";
 }
-
-body {
-  line-height: 1;
-}
-
-ol, ul {
-  list-style: none;
-}
-
-blockquote, q {
-  quotes: none;
-}
-
-blockquote:before, blockquote:after,
-q:before, q:after {
-  content: "";
-  content: none;
-}
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-*, *::before, *::after {
-  box-sizing: border-box;
-}
-
-html {
-  font-size: 10px;
-}
-
-body {
-  font-family: "italianno", cursive;
-}
-
-p {
-  font-family: "Roboto", sans-serif;
-  font-size: 1.6rem;
-  line-height: 2.8rem;
-  padding: 10px;
-  margin-top: 15px;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-.container {
-  width: 100%;
-  margin: 0 auto;
-  padding: 0 15px;
-}
-@media screen and (min-width: 768px) {
-  .container {
-    max-width: 740px;
-  }
-}
-@media screen and (min-width: 1240px) {
-  .container {
-    max-width: 1120px;
-  }
-}
-
-.row {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  margin: 0;
-  padding: 1, 50px;
-}
-@media screen and (min-width: 768px) {
-  .row {
-    flex-direction: row;
-  }
-}
-
-.col {
-  width: 100%;
-  padding: 0 15px 15px 15px;
-}
-@media screen and (min-width: 768px) {
-  .col--md50 {
-    flex: 0 0 50%;
-  }
-}
-@media screen and (min-width: 768px) {
-  .col--md33 {
-    flex: 0 0 33.333333%;
-  }
-}
-@media screen and (min-width: 768px) {
-  .col--md25 {
-    flex: 0 0 25%;
-  }
-}
-@media screen and (min-width: 1240px) {
-  .col--lg50 {
-    flex: 0 0 50%;
-  }
-}
-@media screen and (min-width: 1240px) {
-  .col--lg33 {
-    flex: 0 0 33.333333%;
-  }
-}
-@media screen and (min-width: 1240px) {
-  .col--lg25 {
-    flex: 0 0 25%;
-  }
-}
-
-/*# sourceMappingURL=main.css.map */
