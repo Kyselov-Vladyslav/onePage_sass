@@ -2,20 +2,24 @@
 @use "../02_tools" as *;
 
 .form {
+
     width: 95%;
-    font-family: Roboto, "since-serif";
+    font-family: Roboto, 'sans-serif';
 
     @include medium {
         width: 60%;
     }
+    
     @include large {
         width: 40%;
     }
-    &__lable{
+
+    &__label {
         font-size: 1.8rem;
         margin-bottom: .6rem;
         display: block;
     }
+
     &__item {
         color: $color-white;
         display: block;
@@ -30,9 +34,10 @@
         resize: none;
         font-family: inherit;
 
-        &:focus{
+        &:focus {
             background-color: rgba(255, 255, 255, .2);
             color: $color-white;
         }
     }
+
 }
