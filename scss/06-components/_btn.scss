@@ -1,5 +1,5 @@
 @use "../01-settings" as *;
-@use "../02_tools" as *;
+@use 'sass:color';
 .btn{
     color: $color-white;
     border: none;
@@ -15,13 +15,15 @@
     &--red {
         background-color: $color-red;
         &:hover {
-            background-color: darken($color-red, 10%);
+            // background-color: darken($color-red, 10%);
+            background-color: color.scale($color-red, $blackness: 10%);
         }
     }
     &--green {
         background-color: $color-green;
         &:hover {
-            background-color: darken($color-green, 10%);
+            // background-color: darken($color-green, 10%);
+            background-color: color.scale($color-green, $blackness: 10%);
         }
     }
     &--outline {
